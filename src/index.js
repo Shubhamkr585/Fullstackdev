@@ -13,7 +13,7 @@ dotenv.config({
 
 connectDB().
 then(()=>{
-    app.listen(process.env.PORT || 3000,()=>{
+    app.listen(process.env.PORT || 8000,()=>{
         console.log(`The app is running fast on the port ${process.env.PORT || 3000}`)
     })
 }).
