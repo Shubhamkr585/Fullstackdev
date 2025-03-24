@@ -1,14 +1,14 @@
-const asynchandler = (requestHandler) => {
+const asyncHandler = (requestHandler) => {
     return (req, res, next) => {
         Promise.resolve(requestHandler(req, res, next))
             .catch((err) => next(err));
     };
 };
 
-export { asynchandler };
+export { asyncHandler };
 
 
-// const asynchandler= (fn)=> async (req,res,next)=>{
+// const asynchandler= (fn)=> async(req,res,next) => {
 //     try{
 //         await fn(req,res,next)
 //     }
@@ -19,3 +19,5 @@ export { asynchandler };
 //     }
 
 // }
+
+//express middle ware likhna baaki h
